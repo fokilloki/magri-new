@@ -1,0 +1,127 @@
+.sect_quiz {
+    background: #f7f7f7;
+}
+.quiz_steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.quiz_step_item {
+    text-align: center;
+    flex: 1;
+    padding: 0 15px;
+    position: relative;
+}
+.quiz_step_item:before{
+    content: "";
+    width: calc(100% + 30px);
+    height: 2px;
+    background: #d1d1d1;
+    position: absolute;
+    left: calc(-50% - 15px);
+    top: 15px;
+    transform: translateY(-50%);
+}
+.quiz_step_item.active:before{
+    background: #85AD28;
+}
+.quiz_steps .quiz_step_item:first-child:before{
+    display: none;
+}
+.quiz_step_num {
+    position: relative;
+    background: #D1D1D1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+.quiz_step_item.active .quiz_step_num{
+    background: #85AD28;
+}
+.quiz_step_title {
+    font-size: 12px;
+    line-height: normal;
+    color: #000;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.quiz_content{
+    margin-top: 30px;
+}
+.quiz_answer_item {
+    padding: 20px;
+    border: 2px solid #d1d1d1;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+.quiz_answer_item.active{
+    border-color: #85AD28;
+}
+.quiz_answer_title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.quiz_answer_foto {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+.quiz_answers{
+    justify-content: center;
+    margin-top: 20px;
+}
+.quiz_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz_block{
+    display: none;
+}
+.quiz_block.active{
+    display: block;
+}
+.quiz_buttons .btn:hover{
+    color:  #fff;
+}
+.quiz_block[variant="3"]{
+    text-align: center;
+}
+.quiz_answer_file_info {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.quiz_answer_form_block {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.quiz_body .quiz_block:last-child .quiz_title, .quiz_body .quiz_block:last-child .quiz_next,
+.quiz_block[data-num="1"] .quiz_prev, .quiz_send_btn{
+    display: none;
+}
+.quiz_body .quiz_block:last-child .quiz_send_btn{
+    display: inline-block;
+}
+.quiz_block[data-num="1"] .quiz_buttons{
+    justify-content: center;
+}
+.input_title {
+    font-weight: 500;
+    color: #000;
+}
